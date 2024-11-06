@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ClusterAnalyzer"
+version = "1.0.0"
+description = "A library to analyze critical behavior, self-similarity, and fractal dimension of clusters in cellular automata."
+readme = "README.md"
+requires-python = ">=3.6"
+license = {text = "MIT License"}
+authors = [
+    {name = "Hakan Akgün", email = "hakan.akgun@ug.bilkent.edu.tr"}
+]
+urls = {
+    "Homepage" = "https://github.com/HakanAkgn/ClusterAnalyzer",
+    "Bug Tracker" = "https://github.com/HakanAkgn/ClusterAnalyzer/issues"
+}
+dependencies = [
+    "matplotlib,
+    "numpy",
+    "scipy",
+    "numba",
+    "pandas",
+    "matplotlib",
+    "powerlaw",
+    "sympy"
+]
+
+[project.classifiers]
+Programming Language :: Python :: 3
+License :: OSI Approved :: MIT License
+Operating System :: OS Independent
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,26 @@
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+
+
+
+
+# Unorganized folder
+Unorganized/
+
+# Data files (if not essential)
+plvalues_loglikelihood.xlsx
+plvalues_O=10_size=50.xlsx 
