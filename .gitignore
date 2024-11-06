@@ -21,6 +21,5 @@ var/
 # Unorganized folder
 Unorganized/
 
-# Data files (if not essential)
-plvalues_loglikelihood.xlsx
-plvalues_O=10_size=50.xlsx 
+
+.csv
