@@ -12,3 +12,5 @@ from .statistical_analysis import (
     generate_plots,
 )
 from .visualization import plot_clusters
+
+__version__ = "0.0.1"
