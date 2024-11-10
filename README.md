@@ -36,4 +36,4 @@ print(ca.__version__)
 
 ## Usage
 
-Resort to the [Demo Notebook](./Cluster-Analyzer_Demo.ipynb) for examples of each function.
+Resort to the [Demo Notebook](https://github.com/HakanAkgn/ClusterAnalyzer/blob/main/Cluster_Analyzer_Demo.ipynb) for examples of each function.
