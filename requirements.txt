@@ -6,3 +6,4 @@ pandas
 matplotlib
 powerlaw
 sympy
+tqdm

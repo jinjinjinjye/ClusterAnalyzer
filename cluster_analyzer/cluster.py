@@ -1,13 +1,19 @@
+import os
 import numpy as np
 from numba import njit
 
-@njit
+# Disable Numba cache by default
+import os
+if os.environ.get("NUMBA_CACHE") is None:
+    os.environ["NUMBA_CACHE"] = 'False'
+
+@njit(cache=eval(os.environ.get("NUMBA_CACHE")))
 def find(parent, node):
     if parent[node] != node:
         parent[node] = find(parent, parent[node])
     return parent[node]
 
-@njit
+@njit(cache=eval(os.environ.get("NUMBA_CACHE")))
 def union(parent, rank, size, node1, node2):
     root1, root2 = find(parent, node1), find(parent, node2)
     if root1 != root2:
@@ -22,11 +28,11 @@ def union(parent, rank, size, node1, node2):
             rank[root1] += 1
             size[root1] += size[root2]
 
-@njit
+@njit(cache=eval(os.environ.get("NUMBA_CACHE")))
 def get_index(x, y, rows, cols):
     return (x % rows) * cols + (y % cols)
 
-@njit
+@njit(cache=eval(os.environ.get("NUMBA_CACHE")))
 def union_neighbors(grid, rows, cols, parent, rank, size):
     for i in range(rows):
         for j in range(cols):
@@ -38,7 +44,7 @@ def union_neighbors(grid, rows, cols, parent, rank, size):
             if grid[i, j] == grid[bottom_neighbor]:
                 union(parent, rank, size, get_index(i, j, rows, cols), get_index(*bottom_neighbor, rows, cols))
 
-@njit
+@njit(cache=eval(os.environ.get("NUMBA_CACHE")))
 def calculate_cluster_sizes(grid, rows, cols, parent, size, state_cluster_counts):
     cluster_sizes = np.zeros(rows * cols, dtype=np.int32)
 
@@ -52,7 +58,7 @@ def calculate_cluster_sizes(grid, rows, cols, parent, size, state_cluster_counts
 
     return cluster_sizes
 
-@njit
+@njit(cache=eval(os.environ.get("NUMBA_CACHE")))
 def calculate_size_counts(cluster_sizes):
     max_size = np.max(cluster_sizes)
     size_counts = np.zeros(max_size + 1, dtype=np.int32)
@@ -119,6 +125,7 @@ def analyze_clusters(grid, return_labeled_grid=False):
         # Generate labeled grid for visualization
         labeled_grid = generate_labeled_grid(rows, cols, parent)
         return labeled_grid
+
 def box_counting(grid, min_box_size=1, max_box_size=None, step=1):
     """
     Performs box counting for fractal analysis on a grid.

@@ -3,7 +3,7 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "lgol"
+name = "cluster_analyzer"
 version = "0.0.1"
 description = "A library to analyze critical behavior, self-similarity, and fractal dimension of clusters in cellular automata."
 authors = [
@@ -13,7 +13,7 @@ readme = "README.md"
 requires-python = ">=3.6"
 license = {file = "LICENSE"}
 classifiers = [
-    "Development Status :: 2 - Pre-Alpha",
+    "Development Status :: 3 - Alpha",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3 :: Only",
     "Operating System :: OS Independent"
@@ -21,7 +21,8 @@ classifiers = [
 dependencies = [
     "numba",
     "powerlaw",
-    "sympy"
+    "sympy",
+    "tqdm"
 ]
 
 [project.urls]

@@ -4,6 +4,7 @@ import sympy as sp
 from .cluster import analyze_clusters, box_counting
 from .activity import calculate_activity_rate
 import csv
+from tqdm import trange, tqdm
 
 def GOL(grid, t):
     """
@@ -200,7 +201,15 @@ def lambda_neighborhood_transitions(lambda_value, target_value, num_states, max_
 
 
 
-def simulate_LGOL_for_averages(order, sample_number, size, lamda, t=100000, start_save=50000, save_interval=1, save_with_simulation=False, filename='LGOL_simulation_data.csv',box_counting_flag=False):
+def simulate_LGOL_for_averages(
+    order, sample_number, size, lamda, 
+    t=100000, 
+    start_save=50000, 
+    save_interval=1, 
+    save_with_simulation=False, 
+    filename='LGOL_simulation_data.csv',
+    box_counting_flag=False
+):
     """
     Simulates the Logistic Game of Life (LGOL) for a given order, sample number, size, and lambda.
     Returns size counts, activity rates, box counting results, and averages.
@@ -243,7 +252,7 @@ def simulate_LGOL_for_averages(order, sample_number, size, lamda, t=100000, star
             writer.writerow(['lambda', 'time_step', 'order', 'sample_number', 'size', 'size_counts', 'state_cluster_counts', 'activity_rate', 'box_sizes', 'box_counts'])
     
     # Simulation loop
-    for n in range(t):
+    for n in trange(t):
         s = cantor[a]
         b = convolve2d(s, kernel, mode='same', boundary='wrap')
         a_new = (L//2 + a//2)*(b >= t2)*(b <= t3) + (a)*(b >= t1)*(b < t2) + (a//2)*((b < t1) + (b > t3))
