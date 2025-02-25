@@ -42,6 +42,8 @@ print(ca.__version__)
 
 Resort to the [Demo Notebook](https://github.com/HakanAkgn/ClusterAnalyzer/blob/main/Cluster_Analyzer_Demo.ipynb) for examples of each function.
 
+Resort to the [Data Display Notebook](https://github.com/HakanAkgn/ClusterAnalyzer/blob/main/Paper_Data/Data_Display.ipynb) for a detailed view of the dataset and visualizations used in the paper.
+
 ## Citation
 If you find this work useful, please cite our paper:
 
