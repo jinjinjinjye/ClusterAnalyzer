@@ -28,7 +28,7 @@ dependencies = [
     "sympy",
     "tqdm",
     "pandas",
-    "matplotlib",
+    "matplotlib~=3.7.5",
 ]
 
 [project.optional-dependencies]
