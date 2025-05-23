@@ -334,7 +334,7 @@ def plpvalue(
         return p, gof
 
 
-def perform_plausibility_tests(df, lmds, TrimLargest, downsamples_sizes=[ 1500]):
+def perform_plausibility_tests(df, lmds, TrimLargest, downsamples_sizes=[1500]):
     """
     Performs plausibility tests and log-likelihood tests for different lambda values.
 
@@ -604,4 +604,3 @@ def generate_plots(df, lmds, TrimLargest=False):
  
     dat_df = pd.DataFrame(dat, columns=col_names)
     dat_df.to_csv(f'plvalues_loglikelihood.csv', index=False)
- 
