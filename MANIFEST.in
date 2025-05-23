@@ -1,4 +1,2 @@
-include LICENSE
-include README.md
-recursive-include src/ClusterAnalyzer *
-recursive-include docs *
+exclude assets/*
+prune assets
