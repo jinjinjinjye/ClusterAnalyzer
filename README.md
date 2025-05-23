@@ -1,4 +1,4 @@
-# Cluster_Analyzer [📄**arXiv**](https://arxiv.org/abs/2411.07189)
+# Cluster_Analyzer [![arXiv](https://img.shields.io/badge/arXiv-2412.00568---?logo=arXiv&labelColor=b31b1b&color=grey)](https://arxiv.org/abs/2411.07189)
 
 `cluster_analyzer` is a Python library designed to analyze critical behavior, self-similarity, and fractal dimensions of clusters in cellular automata. It provides tools for simulating cluster formation, performing statistical analyses, and visualizing results.
 
@@ -18,21 +18,21 @@
 You can install ClusterAnalyzer via pip:
 
 ```bash
-pip install cluster-analyzer
+$ pip install cluster-analyzer
 ```
 
 or clone the repository and install it manually:
-
 ```bash
-git clone https://github.com/HakanAkgn/ClusterAnalyzer.git
-
-cd ClusterAnalyzer
-
-pip install -e . # or turn off the editable mode with `pip install .`
+$ git clone https://github.com/HakanAkgn/ClusterAnalyzer.git
+$ cd ClusterAnalyzer
+$ pip install . 
+```
+to install optional dependencies to reproduce all the figures in the paper, run:
+```bash
+pip install .[all]
 ```
 
 Check the installation:
-
 ```python
 import cluster_analyzer as ca
 print(ca.__version__)
@@ -40,9 +40,9 @@ print(ca.__version__)
 
 ## Usage
 
-Resort to the [Demo Notebook](https://github.com/HakanAkgn/ClusterAnalyzer/blob/main/Cluster_Analyzer_Demo.ipynb) for examples of each function.
+See the [Demo Notebook](https://github.com/HakanAkgn/ClusterAnalyzer/blob/main/Cluster_Analyzer_Demo.ipynb) for examples of each function.
 
-Resort to the [Data Display Notebook](https://github.com/HakanAkgn/ClusterAnalyzer/blob/main/Paper_Data/Data_Display.ipynb) for a detailed view of the dataset and visualizations used in the paper.
+See the [Data Display Notebook](https://github.com/HakanAkgn/ClusterAnalyzer/blob/main/Paper_Data/Data_Display.ipynb) for a detailed view of the dataset and visualizations used in the paper.
 
 ## Citation
 If you find this work useful, please cite our paper:
