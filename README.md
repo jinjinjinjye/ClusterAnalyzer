@@ -18,7 +18,7 @@
 You can install ClusterAnalyzer via pip:
 
 ```bash
-$ pip install cluster_analyzer
+$ pip install cluster-analyzer
 ```
 
 or clone the repository and install it manually:
