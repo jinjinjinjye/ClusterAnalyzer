@@ -36,6 +36,9 @@ all = [
     "imageio",
     "joblib",
 ]
+dev = [
+    "hatch",
+]
 
 [project.urls]
 homepage = "https://github.com/HakanAkgn/ClusterAnalyzer"
