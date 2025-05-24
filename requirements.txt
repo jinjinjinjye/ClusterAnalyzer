@@ -1,9 +1,0 @@
-matplotlib
-numpy
-scipy
-numba
-pandas
-matplotlib
-powerlaw
-sympy
-tqdm
