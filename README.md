@@ -40,7 +40,7 @@ print(ca.__version__)
 
 ## Usage
 
-See the [Demo Notebook](https://github.com/HakanAkgn/ClusterAnalyzer/blob/main/Cluster_Analyzer_Demo.ipynb) for examples of each function.
+See the [Demo Notebook](https://github.com/HakanAkgn/ClusterAnalyzer/blob/main/ClusterAnalyzerDemo.ipynb) for examples of each function.
 
 See the [Data Display Notebook](https://github.com/HakanAkgn/ClusterAnalyzer/blob/main/Paper_Data/Data_Display.ipynb) for a detailed view of the dataset and visualizations used in the paper.
 
