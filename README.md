@@ -48,10 +48,10 @@ See the [Data Display Notebook](https://github.com/HakanAkgn/ClusterAnalyzer/blo
 If you find this work useful, please cite our paper:
 
 ```bibtex
-@misc{akgün2024deterministiccriticalitycluster,
-      title={Deterministic criticality & cluster dynamics hidden in the Game of Life}, 
-      author={Hakan Akgün and Xianquan Yan and Tamer Taşkıran and Muhamet Ibrahimi and Arash Mobaraki and Ching Hua Lee and Seymur Jahangirov},
-      year={2024},
+@misc{akgun2025scaleinvariantdynamicspurelydeterministic,
+      title={Scale-invariant dynamics in a purely deterministic Game of Life model}, 
+      author={Hakan Akgun and Xianquan Yan and Tamer Taskiran and Muhamet Ibrahimi and Ching Hua Lee and Seymur Jahangirov},
+      year={2025},
       eprint={2411.07189},
       archivePrefix={arXiv},
       primaryClass={cond-mat.stat-mech},
